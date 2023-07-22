@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link href="{{url_for('static',filename='/css/login.css')}}" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="login-form-container">
+      <div id="close-login-btn" class="fas fa-times"></div>
+     
+      <form id="myform" name="myform" method="POST" action="/services">
+
+      
+        <h3>Registration Form</h3>
+        <p id="help" style="color: red"></p>
+        <span>Name</span>
+        <input
+          type="text"
+          name="name3"
+          class="box"
+          placeholder="Enter your Name"
+          id="name"
+        />
+        <span>Email</span>
+        <input
+          type="email"
+          name="email3"
+          class="box"
+          placeholder="Enter Your Email"
+          id="email"
+        />
+        <span>Phno</span>
+        <input
+          type="text"
+          name="phno3"
+          class="box"
+          placeholder="Enter Your Phno"
+          id="phno"
+        />
+        <span>Services You Wish</span>
+        <select name="Service" class="box" name="services">
+          <option value="UI/UX">UI/UX</option>
+          <option value="APP Development">APP Development</option>
+          <option value="Graphic design">Graphic design</option>
+          <option value="Content Writing">Content Writing</option>
+        </select>
+        <span>Time period</span>
+        <label>BEFORE</label>
+        <input type="date"  name="time" value="2023-05-24">
+       
+        <span>Description</span>
+
+        <textarea name="description"></textarea>
+        
+        <input type="submit" value="Submit" class="button"/>
+      </form>
+    </div>
+  </body>
+</html>

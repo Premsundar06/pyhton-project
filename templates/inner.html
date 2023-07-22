@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Data</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/style.css')}}" />
+  </head>
+
+  <body>
+    <h1>Table Data</h1>
+    <table class="tbody">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>email</th>
+          <th>message</th>
+          <!-- Add more column headers as per your table structure -->
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table_data %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+
+          <!-- Add more table cells as per your table structure -->
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
